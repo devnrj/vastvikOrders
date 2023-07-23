@@ -17,7 +17,7 @@ const FilterPanel = props => {
                         <FontAwesomeIcon icon="magnifying-glass" color={Colors.accent}></FontAwesomeIcon>
                     </View>
                     <TextInput
-                        placeholder='Search by any order parameter'
+                        placeholder='Search by order id'
                         onChangeText={searchTextHandler}
                     />
                 </View>

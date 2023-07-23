@@ -6,7 +6,9 @@ import Colors from '../constants/Colors';
 const Header = props => {
     return (
         <View style={{ ...styles.screen, ...props.style }}>
+            <View style={styles.icon}>
             <FontAwesomeIcon icon="clipboard-list" color={Colors.accent} size={25}></FontAwesomeIcon>
+            </View>
             <Text style={styles.font}>{props.title}</Text>
         </View >
     )
@@ -20,7 +22,10 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
         marginTop: 26,
         width: '100%',
-        height: '10%'
+        height: '15%',
+    },
+    icon: {
+        padding: 10
     },
     font: {
         fontFamily: Fonts.family,

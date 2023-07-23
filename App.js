@@ -1,5 +1,5 @@
 import { React, useState } from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { KeyboardAvoidingView, ScrollView, StyleSheet, Text, View } from 'react-native';
 import Header from './components/Header';
 import FilterPanel from './screens/FilterPanel';
 import Colors from './constants/Colors';
@@ -11,13 +11,15 @@ export default function App() {
     console.log(text);
   }
   return (
-    <View style={styles.screen}>
+    <ScrollView style={styles.screen}>
+      <KeyboardAvoidingView style={styles.screen} behavior='position'>
       <Header style={styles.header} title='ORDERS'></Header>
       <FilterPanel style={styles.filterPanel} onSearchTextInput={getSearchText}></FilterPanel>
       <View style={styles.contentPanel}>
         <Text>{searchText}</Text>
       </View>
-    </View>
+      </KeyboardAvoidingView>
+    </ScrollView>
   );
 }
 
