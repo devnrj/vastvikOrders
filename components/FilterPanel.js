@@ -22,13 +22,15 @@ const FilterPanel = props => {
                     />
                 </View>
                 <View style={styles.actionItems}>
-                    <Pressable style={styles.button}>
+                    <Pressable style={styles.button}
+                        android_ripple={{ color: '#ccc' }}>
                         <View style={styles.icon}>
                             <FontAwesomeIcon icon="filter" color={Colors.accent}></FontAwesomeIcon>
                         </View>
                         <Text style={styles.font}>Filter</Text>
                     </Pressable>
-                    <Pressable style={styles.button}>
+                    <Pressable style={styles.button}
+                        android_ripple={{ color: '#ccc' }}>
                         <View style={styles.icon}>
                             <FontAwesomeIcon icon="sort" color={Colors.accent}></FontAwesomeIcon>
                         </View>
@@ -59,7 +61,6 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
     },
     panel: {
-        marginLeft: 10,
         height: 200,
         justifyContent: 'space-evenly'
     },
