@@ -1,4 +1,6 @@
-import Order from "../models/order"
+import Order from "../models/order";
+import Color from "../models/color";
+
 export const ORDERS = [
     new Order(
         'order1', 'Shyam',
@@ -74,4 +76,9 @@ export const ORDERS = [
         '42, 11, 5, 92, 92',
         83
     )
+]
+export const COLORDATA = [
+    new Color(1, 42),
+    new Color(2, 44),
+    new Color(3, 41)
 ]

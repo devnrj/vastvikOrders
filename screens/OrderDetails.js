@@ -5,14 +5,13 @@ import IconButton from "../components/IconButton";
 const OrderDetails = ({ route, navigation }) => {
     const order = route.params.item;
     const headerButtonPressedHandler = () => {
-        console.log(order);
         navigation.navigate("EditOrder", order);
     }
     useLayoutEffect(() => {
         navigation.setOptions({
             title: order.id,
             headerRight: () => {
-                return <IconButton title="Edit" style={styles.headerRight} icon="pen-to-square" onPress={headerButtonPressedHandler}></IconButton>
+                return <IconButton title="Edit" style={styles.headerRight} icon="pen-to-square" textColor='white' onPress={headerButtonPressedHandler}></IconButton>
             }
         });
     }, [order.id, navigation, headerButtonPressedHandler]);

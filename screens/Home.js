@@ -19,7 +19,7 @@ const Home = ({ navigation }) => {
     useLayoutEffect(() => {
         navigation.setOptions({
             headerRight: () => {
-                return <IconButton title='Add' style={styles.headerRight} icon="plus" onPress={headerButtonPressedHandler}></IconButton>
+                return <IconButton title='Add' textColor='white' style={styles.headerRight} icon="plus" onPress={headerButtonPressedHandler}></IconButton>
             }
         });
     }, [navigation, headerButtonPressedHandler]);
