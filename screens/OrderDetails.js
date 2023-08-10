@@ -9,7 +9,7 @@ const OrderDetails = ({ route, navigation }) => {
     }
     useLayoutEffect(() => {
         navigation.setOptions({
-            title: order.id,
+            title: order.orderNumber,
             headerRight: () => {
                 return <IconButton title="Edit" style={styles.headerRight} icon="pen-to-square" textColor='white' onPress={headerButtonPressedHandler}></IconButton>
             }

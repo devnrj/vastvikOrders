@@ -17,7 +17,7 @@ const FilterPanel = props => {
                         <FontAwesomeIcon icon="magnifying-glass" color={Colors.accent}></FontAwesomeIcon>
                     </View>
                     <TextInput
-                        placeholder='Search by order id'
+                        placeholder='Search by order number...'
                         onChangeText={searchTextHandler}
                     />
                 </View>
@@ -30,7 +30,8 @@ const FilterPanel = props => {
                         <Text style={styles.font}>Filter</Text>
                     </Pressable>
                     <Pressable style={styles.button}
-                        android_ripple={{ color: '#ccc' }}>
+                        android_ripple={{ color: '#ccc' }}
+                        onPress={props.onSortOrders}>
                         <View style={styles.icon}>
                             <FontAwesomeIcon icon="sort" color={Colors.accent}></FontAwesomeIcon>
                         </View>
@@ -53,10 +54,12 @@ const styles = StyleSheet.create({
         padding: 10
     },
     input: {
-        borderWidth: 1,
+        borderWidth: 0.7,
+        elevation: 3,
         borderCurve: 'circular',
         backgroundColor: 'white',
         borderRadius: 10,
+        borderColor: '#cfcfcf',
         padding: 10,
         flexDirection: 'row',
     },
@@ -69,7 +72,9 @@ const styles = StyleSheet.create({
         justifyContent: 'space-between'
     },
     button: {
-        borderWidth: 1,
+        borderWidth: 0.7,
+        elevation: 3,
+        borderColor: '#cfcfcf',
         backgroundColor: 'white',
         width: '45%',
         height: 50,

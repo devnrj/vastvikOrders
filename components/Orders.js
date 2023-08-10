@@ -3,10 +3,10 @@ import { StyleSheet, FlatList, View } from "react-native";
 import { ORDERS } from "../data/dummyData";
 import OrderCard from "./OrderCard";
 
-const Orders = (navigation) => {
+const Orders = (props) => {
     const renderOrder = (order) => {
         const PressHandler = () => {
-            navigation.navigation.navigate("OrderDetails", { ...order });
+            props.navigation.navigate("OrderDetails", { ...order });
         }
         return (
             <View styles={styles.list}>
@@ -17,7 +17,7 @@ const Orders = (navigation) => {
     return (
 
         <FlatList
-            data={ORDERS}
+            data={props.data}
             keyExtractor={(item) => item.id}
             renderItem={renderOrder}
             numColumns={1}
